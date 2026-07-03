@@ -1,0 +1,19 @@
+Username and Groups: * id (or whoami and groups)
+
+Observation: This command outputs your exact username (UID) and the specific permission groups (GID) your account belongs to.
+
+Current Shell: * echo $SHELL
+
+Observation: This prints the absolute path of your current command-line interpreter (e.g., /bin/bash or /bin/zsh).
+
+Current Working Directory: * pwd
+
+Observation: This shows the absolute path of the directory you are currently located in.
+
+List Files and Directories: * ls -la
+
+Observation: The -la flags list all files (including hidden ones starting with a dot) in a long format, showing permissions, ownership, and sizes.
+
+Network Connectivity: * ping -c 4 8.8.8.8
+
+Observation: This sends 4 ICMP echo requests to Google's public DNS to verify that your machine has active internet routing.
