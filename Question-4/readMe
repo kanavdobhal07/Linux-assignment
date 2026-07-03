@@ -1,0 +1,11 @@
+Identify Open Files: * lsof | head -n 20
+
+Observation: Lists files currently opened by active processes. Piping to head limits the output so it doesn't flood the terminal.
+
+Standard Output & Error Redirection: * ls -la /root > output.txt 2> error.txt
+
+Observation: Because a standard user cannot read /root, this command redirects the standard error (file descriptor 2) to error.txt and standard output (file descriptor 1) to output.txt.
+
+Check Resource Limits: * ulimit -a
+
+Observation: Displays all shell resource limits, showing how Linux prevents a single user from consuming all system resources (like maximum open file descriptors).
