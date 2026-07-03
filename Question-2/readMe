@@ -1,0 +1,15 @@
+Check Umask: * umask
+
+Observation: This shows the default permissions subtracted from new files and directories upon creation (often 0022 or 0002).
+
+Create Directory: * mkdir secure_project
+
+Observation: Creates a new empty directory for the project files.
+
+Modify Permissions: * chmod 770 secure_project
+
+Observation: This restricts access so that only the owner and the group have read, write, and execute permissions. Others have absolutely no access, protecting the data.
+
+Check Ownership and Permissions: * ls -ld secure_project
+
+Observation: Confirms the directory's permissions (which should now look like drwxrwx---) and displays the user and group ownership.
