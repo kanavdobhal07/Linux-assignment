@@ -1,0 +1,19 @@
+Available Storage Devices: * lsblk
+
+Observation: Displays a tree-like view of all block devices (hard drives, partitions) attached to the system.
+
+Mounted File Systems and Disk Usage: * df -h
+
+Observation: Shows the total, used, and available space on all mounted file systems in a human-readable format (Gigabytes/Megabytes).
+
+Inode Utilization: * df -i
+
+Observation: Displays how many inodes (file index entries) are used and available. Running out of inodes prevents new file creation even if there is physical disk space left.
+
+Using vi to Document:
+
+Type vi Storage_Assessment_Report.txt
+
+Press i to enter Insert Mode and type your findings based on the df and lsblk outputs.
+
+Press Esc to exit Insert Mode, then type :wq and press Enter to write (save) the file and quit the editor.
