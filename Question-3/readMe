@@ -1,0 +1,17 @@
+Create Original File: * echo "Important Data" > original_file.txt
+
+Create Hard Link: * ln original_file.txt hard_link.txt
+
+Observation: Creates a new directory entry pointing to the exact same inode on the disk as the original file.
+
+Create Symbolic Link: * ln -s original_file.txt sym_link.txt
+
+Observation: Creates a shortcut file that simply points to the file path of the original file, rather than the data itself.
+
+Check Inodes: * ls -li
+
+Observation: The -i flag reveals that original_file.txt and hard_link.txt share the exact same inode number, while sym_link.txt has a different one.
+
+Delete Original and Re-check: * rm original_file.txt followed by cat hard_link.txt and cat sym_link.txt
+
+Observation: The hard link still retains the data because the underlying data is not deleted until all hard links are removed. The symbolic link is now broken and will return an error.
